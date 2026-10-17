@@ -119,11 +119,11 @@ export const FireworksScene: React.FC<FireworksSceneProps> = ({ onContinue, onOp
       )}
 
       {/* Secret heart floating in sky */}
-      {isMidnight && !discoveredSecrets.includes('secret-2') && (
+      {isMidnight && !discoveredSecrets.includes('secret-3') && (
         <button
           className="secret-heart"
           style={{ top: '18%', right: '22%', zIndex: 25 }}
-          onClick={() => onOpenSecret('secret-2')}
+          onClick={() => onOpenSecret('secret-3')}
           aria-label="Discover secret wish in the sky"
         >
           <span style={{ fontSize: '0.85rem' }}>♥</span>

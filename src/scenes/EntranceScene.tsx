@@ -58,11 +58,11 @@ export const EntranceScene: React.FC<EntranceSceneProps> = ({ onGiveFlowers, onO
       ))}
 
       {/* Secret heart near entrance */}
-      {!discoveredSecrets.includes('secret-3') && (
+      {!discoveredSecrets.includes('secret-4') && (
         <button
           className="secret-heart"
           style={{ bottom: '28%', left: '14%' }}
-          onClick={() => onOpenSecret('secret-3')}
+          onClick={() => onOpenSecret('secret-4')}
           aria-label="Discover secret note"
         >
           <span style={{ fontSize: '0.85rem' }}>♥</span>

@@ -16,6 +16,7 @@ import { ChaiPointScene } from '../scenes/ChaiPointScene';
 import { RooftopScene } from '../scenes/RooftopScene';
 import { FinaleScene } from '../scenes/FinaleScene';
 import { useBackgroundMusic } from '../hooks/useBackgroundMusic';
+import { SecretPhotoModal } from './SecretPhotoModal';
 
 const SCENE_SEQUENCE: SceneId[] = [
   'opening', 'letter', 'waiting', 'midnight',
@@ -178,39 +179,8 @@ export const SceneManager: React.FC = () => {
         })}
       </div>
 
-      {/* Secret Note reveal — slides up from bottom */}
-      <AnimatePresence>
-        {activeSecret && (
-          <motion.div
-            initial={{ y: '100%', opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            exit={{ y: '100%', opacity: 0 }}
-            transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-            className="secret-note"
-            style={{ zIndex: 100 }}
-          >
-            <div style={{ maxWidth: 560, margin: '0 auto', display: 'flex', alignItems: 'flex-start', justifyContent: 'space-between', gap: '1rem' }}>
-              <div style={{ flex: 1 }}>
-                <div style={{ fontSize: '0.6rem', letterSpacing: '0.18em', textTransform: 'uppercase', color: 'rgba(255,201,121,0.7)', marginBottom: '0.3rem', fontFamily: 'var(--font-body)' }}>
-                  ✦ {activeSecret.title}
-                </div>
-                <p style={{ fontFamily: 'var(--font-hand)', fontSize: '1.2rem', color: 'rgba(255,246,236,0.95)', lineHeight: 1.5 }}>
-                  {activeSecret.message}
-                </p>
-              </div>
-              <button
-                onClick={() => setActiveSecret(null)}
-                style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.4)', cursor: 'pointer', fontSize: '1.2rem', lineHeight: 1, padding: '0.2rem', marginTop: '-0.1rem', transition: 'color 0.2s ease' }}
-                onMouseEnter={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.9)')}
-                onMouseLeave={e => (e.currentTarget.style.color = 'rgba(255,255,255,0.4)')}
-                aria-label="Close secret"
-              >
-                ✕
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Secret Note & Photo Modal */}
+      <SecretPhotoModal note={activeSecret} onClose={() => setActiveSecret(null)} />
 
       {/* Letter Re-read overlay */}
       <AnimatePresence>

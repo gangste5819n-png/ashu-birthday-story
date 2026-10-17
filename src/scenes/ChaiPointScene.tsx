@@ -181,11 +181,11 @@ export const ChaiPointScene: React.FC<ChaiPointSceneProps> = ({
       </div>
 
       {/* Secret Heart hidden near the warm café window */}
-      {!discoveredSecrets.includes('secret-4') && (
+      {!discoveredSecrets.includes('secret-8') && (
         <button
           className="secret-heart"
           style={{ top: '32%', right: '22%' }}
-          onClick={() => onOpenSecret('secret-4')}
+          onClick={() => onOpenSecret('secret-8')}
           aria-label="Discover secret note"
         >
           <span style={{ fontSize: '0.85rem' }}>♥</span>

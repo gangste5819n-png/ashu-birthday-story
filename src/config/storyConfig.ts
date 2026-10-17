@@ -35,11 +35,15 @@ export interface ChaiConversation {
   turns: ChaiDialogueTurn[];
 }
 
+import { SECRET_NOTES_CONFIG } from './secretPhotosConfig';
+
 export interface SecretMessage {
   id: string;
-  locationHint: string;
+  locationHint?: string;
   title: string;
   message: string;
+  photoUrl?: string;
+  sceneName?: string;
 }
 
 export interface StoryConfig {
@@ -470,38 +474,7 @@ export const STORY_CONFIG: StoryConfig = {
   },
 
   // Hidden easter egg heart messages scattered throughout scenes
-  secretMessages: [
-    {
-      id: 'secret-1',
-      locationHint: "Glowing window in the apartment building",
-      title: "Secret Note #1 🌟",
-      message: "A little reminder: you deserve endless kindness, patience, and warmth."
-    },
-    {
-      id: 'secret-2',
-      locationHint: "Floating in the midnight fireworks sky",
-      title: "Secret Note #2 🎆",
-      message: "I hope something genuinely wonderful surprises you today and makes you laugh out loud."
-    },
-    {
-      id: 'secret-3',
-      locationHint: "Tucked inside the bouquet wrapping",
-      title: "Secret Note #3 🌹",
-      message: "May you find unexpected joy and peace in the smallest, simplest moments of your day."
-    },
-    {
-      id: 'secret-4',
-      locationHint: "Warm window pane at Chai Point",
-      title: "Secret Note #4 ☕",
-      message: "Every conversation with you is my favorite memory in the making."
-    },
-    {
-      id: 'secret-5',
-      locationHint: "Shooting star in the finale rooftop sky",
-      title: "Secret Note #5 🌙",
-      message: "Here's one more reason to smile: you are loved, today and every day after. ❤️"
-    }
-  ]
+  secretMessages: SECRET_NOTES_CONFIG
 };
 
 // Also export alias for compatibility with any existing imports

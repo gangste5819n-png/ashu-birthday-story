@@ -92,13 +92,13 @@ export const BouquetScene: React.FC<BouquetSceneProps> = ({ onGiveHug, onOpenSec
       }} />
 
       {/* Secret heart in bouquet ribbon */}
-      {!discoveredSecrets.includes('secret-3') && (
+      {!discoveredSecrets.includes('secret-5') && (
         <button
           className="secret-heart"
           style={{ bottom: '45%', right: '36%' }}
           onClick={(e) => {
             e.stopPropagation();
-            onOpenSecret('secret-3');
+            onOpenSecret('secret-5');
           }}
           aria-label="Discover secret note"
         >

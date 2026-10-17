@@ -145,13 +145,13 @@ export const RooftopScene: React.FC<RooftopSceneProps> = ({
       </AnimatePresence>
 
       {/* Secret Heart hidden among the stars */}
-      {!discoveredSecrets.includes('secret-5') && (
+      {!discoveredSecrets.includes('secret-9') && (
         <button
           className="secret-heart"
           style={{ top: '18%', right: '34%' }}
           onClick={(e) => {
             e.stopPropagation();
-            onOpenSecret('secret-5');
+            onOpenSecret('secret-9');
           }}
           aria-label="Discover secret note"
         >

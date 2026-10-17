@@ -75,11 +75,11 @@ export const BuildingScene: React.FC<BuildingSceneProps> = ({
       ))}
 
       {/* Secret heart on a lit window */}
-      {!discoveredSecrets.includes('secret-1') && (
+      {!discoveredSecrets.includes('secret-2') && (
         <button
           className="secret-heart"
           style={{ top: '28%', left: '52%' }}
-          onClick={() => onOpenSecret('secret-1')}
+          onClick={() => onOpenSecret('secret-2')}
           aria-label="Discover secret note"
         >
           <span style={{ fontSize: '0.85rem' }}>♥</span>

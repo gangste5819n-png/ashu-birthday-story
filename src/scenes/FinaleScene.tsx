@@ -114,11 +114,11 @@ export const FinaleScene: React.FC<FinaleSceneProps> = ({
       ))}
 
       {/* Secret Heart */}
-      {!discoveredSecrets.includes('secret-5') && (
+      {!discoveredSecrets.includes('secret-10') && (
         <button
           className="secret-heart"
           style={{ top: '16%', right: '22%' }}
-          onClick={() => onOpenSecret('secret-5')}
+          onClick={() => onOpenSecret('secret-10')}
           aria-label="Discover secret note"
         >
           <span style={{ fontSize: '0.85rem' }}>♥</span>

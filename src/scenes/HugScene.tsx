@@ -57,11 +57,11 @@ export const HugScene: React.FC<HugSceneProps> = ({ onGoForRide, onOpenSecret, d
       ))}
 
       {/* Secret heart */}
-      {!discoveredSecrets.includes('secret-4') && (
+      {!discoveredSecrets.includes('secret-6') && (
         <button
           className="secret-heart"
           style={{ top: '22%', left: '18%' }}
-          onClick={() => onOpenSecret('secret-4')}
+          onClick={() => onOpenSecret('secret-6')}
           aria-label="Discover secret note"
         >
           <span style={{ fontSize: '0.85rem' }}>♥</span>

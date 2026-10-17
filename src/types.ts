@@ -16,6 +16,8 @@ export interface SecretNoteData {
   title: string;
   message: string;
   locationHint?: string;
+  photoUrl?: string;
+  sceneName?: string;
 }
 
 export interface SoundEffectsController {

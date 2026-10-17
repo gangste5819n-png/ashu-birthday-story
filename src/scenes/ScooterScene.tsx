@@ -109,11 +109,11 @@ export const ScooterScene: React.FC<ScooterSceneProps> = ({
       ))}
 
       {/* Secret Heart along the illuminated street */}
-      {!discoveredSecrets.includes('secret-4') && (
+      {!discoveredSecrets.includes('secret-7') && (
         <button
           className="secret-heart"
           style={{ bottom: '38%', left: '16%' }}
-          onClick={() => onOpenSecret('secret-4')}
+          onClick={() => onOpenSecret('secret-7')}
           aria-label="Discover secret note"
         >
           <span style={{ fontSize: '0.85rem' }}>♥</span>
